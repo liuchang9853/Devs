@@ -6,7 +6,10 @@ using namespace std;
 int main(){
 	string str_1;
 	cin >> str_1; //I love you.
-	cout << str_1; //I #cin不接受空格和换行 
+	cout << str_1; //I
+	/*
+	cin不接受空格和换行
+	*/ 
 	
 	getline(cin , str_1); //I love you.
 	cout << str_1; //I love you.
