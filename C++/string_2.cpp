@@ -4,32 +4,32 @@
 #include <cstring>
 using namespace std;
 int main () {
-	char str1[11] = "Hello";
+	char str1[11] = "Hello"; //å­—ç¬¦ä¸²èµ‹å€¼å½¢å¼
 	char str2[11] = "World";
 	char str3[11];
 	int len;
 
-	//¸´ÖÆ str1 µ½ str3 £¬ ·µ»Østr3¡£ 
+	//å¤åˆ¶ str1 åˆ° str3 ï¼Œ è¿”å›str3ã€‚ 
 	strcpy( str3, str1);
 	cout << "strcpy(str3 , str1) : " << str3 << endl;
 
 	char s [ ] = "abcdefgh" , *p = s;
 	p += 3;
-	printf("%d\n" , strlen(strcpy(p , "ABCD"))); //¸´ÖÆºó£¬·µ»Øp£¬Êä³ö4
+	printf("%d\n" , strlen(strcpy(p , "ABCD"))); //å¤åˆ¶åï¼Œè¿”å›pï¼Œè¾“å‡º4
 	/*
-	strcpy¸´ÖÆÍêÖ®ºó£¬×Ö·û´®ÎªabcABCD£¬µ«ÊÇpÖ¸ÏòµÄÎ»ÖÃÊÇA£¬
-	ËùÒÔ¼ÆËã³¤¶ÈµÄÊ±ºòÇ°ÃæÈı¸ö²»»áËãÈëÆäÖĞ¡£
+	strcpyå¤åˆ¶å®Œä¹‹åï¼Œå­—ç¬¦ä¸²ä¸ºabcABCDï¼Œä½†æ˜¯pæŒ‡å‘çš„ä½ç½®æ˜¯Aï¼Œ
+	æ‰€ä»¥è®¡ç®—é•¿åº¦çš„æ—¶å€™å‰é¢ä¸‰ä¸ªä¸ä¼šç®—å…¥å…¶ä¸­ã€‚
 	*/
 
-	//Á¬½Ó str1 ºÍ str2
+	//è¿æ¥ str1 å’Œ str2
 	strcat(str1 , str2);
 	cout << "strcat(str1 , str2) : " << str1 << endl;
 
-	//Á¬½Óºó£¬str1 µÄ×Ü³¤¶È
+	//è¿æ¥åï¼Œstr1 çš„æ€»é•¿åº¦
 	len = strlen(str1);
 	cout << " strlen(str1) : " << len << endl;
 	
-	//±È½Ï£¬Èôstr1=str2£¬i=0£»Èôstr1<str2£¬i<0£»Èôstr1>str2£¬i>0£» 
+	//æ¯”è¾ƒï¼Œè‹¥str1=str2ï¼Œi=0ï¼›è‹¥str1<str2ï¼Œi<0ï¼›è‹¥str1>str2ï¼Œi>0ï¼› 
 	int i = strcmp(str1 , str2);
 	cout << i;
 	
