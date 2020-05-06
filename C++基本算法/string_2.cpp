@@ -1,4 +1,4 @@
-//#include<cstring>
+//#include<cstring>，该头文件下的函数参数大多为char * ptr。
 
 #include <iostream>
 #include <cstring>
