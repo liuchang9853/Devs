@@ -50,5 +50,16 @@ int main() {
 	int * duplication = new int;
 	cout << duplicate(numbers , len , duplication) << endl;
 	cout << * duplication << endl;
+	/*
+	输出：
+	1
+	2 
+	*/ 
+	for (int i=0;i<len;++i) cout << numbers[i];
+	/*
+	输出：
+	0123253 
+	由此看出，空间复杂度：O(1)，没有开辟新的空间。
+	*/ 
 	return 0;
 }
