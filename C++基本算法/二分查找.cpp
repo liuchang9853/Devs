@@ -5,7 +5,7 @@ int binSearch(const int *Array,int start,int end,int key) {
 	int mid;
 	left=start;
 	right=end;
-	while(left<=right){
+	while(left<=right) {
 		mid=left+(right-left)/2;
 		if(key==Array[mid])  return mid;
 		else if(key<Array[mid]) right=mid-1;
