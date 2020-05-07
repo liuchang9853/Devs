@@ -33,5 +33,10 @@ int main () {
 	int i = strcmp(str1 , str2);
 	cout << i;
 	
+	/*
+	每一string结尾处都是'\0'，不论该string的定义是char *、char []还是string。
+	在#include<cstring>中，strlen(str)输出的str的用户定义字符个数，但实际上str包含两个部分：用户定义字符 和 '\0'。
+	若有：char str[5] = "loveU";则出错，因为char[]方式定义，必须把最后一个元素留给'\0'。
+	*/
 	return 0;
 }
