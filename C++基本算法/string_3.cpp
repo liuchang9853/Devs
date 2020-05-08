@@ -48,13 +48,26 @@ int main() {
 	cout << atoi(str.c_str());
 	/*
 	（1） string->char[]
-	#include<cstdlib>下：
-	string.c_str()函数将字符串 转换为 char数组返回。
+	#include<cstdlib>
+	#include<cstring>
+	#include<string>
+	
+	string str="I love you.";
+	char * ch = new char[str.size()+1];
+	strcpy(ch,str.c_str);
+	
+	这样就得到了数组ch[]，长度是str.size()+1。 
 	 
-	atoi(char数组)char数组转十进制数字，并去前导零0115->115。 
 	（2）char[]->string
 	string str = "";
 	for(int i=0;char[i];++i) str += char[i];
+	
+	（3）
+	int atoi(const char* str)，str转十进制数字，并去前导零0115->115。
+	
+	const char *c_str()，c_str()函数返回一个指向正规C字符串的指针常量, 
+	内容与本string串相同。这是为了与c语言兼容，在c语言中没有string类型，
+	故必须通过string类对象的成员函数c_str()把string 对象转换成c中的字符串样式。 
 	*/
 	return 0;
 }
