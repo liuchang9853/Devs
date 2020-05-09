@@ -7,19 +7,19 @@ string_1：
 （1）#include<string>头文件下的string类型、常用函数、遍历。
 （2）cin和getline()
 
-string_2：
+#### string_2：
 （1）#include<cstring>头文件下的赋值、复制、连接、比较、长度函数。
 （2）字符串的'\0'问题。
 
-string_3：
+#### string_3：
 （1）三种字符串定义方式的比较，包括赋值、长度获取。
 （2）string类型变量 与 char []变量 之间的转换。
 （3）atoi()函数、c_str()函数。
 
-string_4：
+#### string_4：
 （1）char * 、char [] 、string 三者的类型兼容问题。
 
-string_5：
+#### string_5：
 （1）sizeof()
 （2）当数组作为函数的参数进行传递时，数组就自动退化为同类型的指针。
 
