@@ -5,7 +5,7 @@
 特点，实现目标。
 */
 #include <iostream>
-#include <stack>
+#include <stack> //栈头文件 
 using namespace std;
 
 typedef struct ListNode {
@@ -24,18 +24,19 @@ void addToTail(ListPtr &L , int data) {
 
 void reverseList(ListPtr &L) {
 	ListPtr ptr = L;
-	stack<int>ListStack;//
+	stack<int> ListStack; //栈定义：stack<ElemType> stackName;
 
 	while(ptr->nextPtr != nullptr) {
-		ListStack.push(ptr->nextPtr->data);//
+		ListStack.push(ptr->nextPtr->data); //入栈：stackName.push(elem); 
 		ptr = ptr->nextPtr;
 	}
 
-	while (!ListStack.empty()) {
-		cout << ListStack.top() << " ";//返回栈顶元素
-		ListStack.pop();//出栈
+	while (!ListStack.empty()) { //判断栈是否为空：stackName.empty();
+		cout << ListStack.top() << " "; //返回栈顶元素：stackName.top();
+		ListStack.pop(); //出栈：stackName.pop();
 	}
-}
+} 
+//返回栈中元素的个数：stackName.size();
 
 int main() {
 	ListPtr L = new LNode();
