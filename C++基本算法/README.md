@@ -8,28 +8,28 @@
 2. `#include<stack>`头文件下的各种栈操作，定义，出栈，入栈，返回栈顶，判断是否为空，元素数。
 
 #### string_1：
-1. #include<string>头文件下的string类型、常用函数、遍历。
-2. cin和getline()
+1. `#include<string>`头文件下的`string`类型、常用函数、遍历。
+2. `cin`和`getline()`。
 
 #### string_2：
-1. #include<cstring>头文件下的赋值、复制、连接、比较、长度函数。
+1. `#include<cstring>`头文件下的赋值、复制、连接、比较、长度函数。
 2. 字符串的'\0'问题。
 
 #### string_3：
 1. 三种字符串定义方式的比较，包括赋值、长度获取。
-2. string类型变量 与 char []变量 之间的转换。
-3. atoi()函数、c_str()函数。
+2. `string`类型变量 与 `char []`变量 之间的转换。
+3. `atoi()`函数、`c_str()`函数。
 
 #### string_4：
-1. char * 、char [] 、string 三者的类型兼容问题。
+1. `char *` 、`char []` 、`string` 三者的类型兼容问题。
 
 #### string_5：
-1. sizeof()
+1. `sizeof()`。
 2. 当数组作为函数的参数进行传递时，数组就自动退化为同类型的指针。
 
 #### string_6：
-1. char * ch = "const"; 和 string str = "const";中ch和str指针内容的问题。
-2. char * ch 中ch所指空间的赋值问题。
+1. `char * ch = "const";` 和 `string str = "const";`中`ch`和`str`指针内容的问题。
+2. `char * ch` 中`ch`所指空间的赋值问题。
 
 #### string_7：
 1. 题目：实现一个函数，把字符串中的每个空格替换成"%20"。例如输入“We are happy.”，则输出“We%20are%20happy.”。
@@ -66,4 +66,4 @@ place(arr,str.size()+1);
 1. =运算符重载函数。
 2. 运算符重载函数的注意点。
 3. 对象的封闭性。
-4. delete使用时的一个注意点。
+4. `delete`使用时的一个注意点。
