@@ -8,6 +8,12 @@
 2. `listReverse()`。
 3. `#include<stack>`头文件下的各种栈操作，定义，出栈，入栈，返回栈顶，判断是否为空，元素数。
 
+#### list_3：
+1. 题目：用两个栈实现队列。
+2. 类模板`template <typename T> class`的使用实例。
+3. `exit()`。
+4. `#include<stack>`的使用实例。
+
 #### string_1：
 1. `#include<string>`头文件下的`string`类型、常用函数、遍历。
 2. `cin`和`getline()`。
