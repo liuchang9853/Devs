@@ -2,7 +2,7 @@
 using namespace std;
 int binSearch(const int *Array , int start , int end , int key) {
 	int low = start,high = end,mid;
-	while(end <= high) {
+	while(low <= high) {
 		mid=low + (high - low) / 2;
 		if(key == Array[mid])  return mid;
 		else if(key > Array[mid]) low = mid + 1;
