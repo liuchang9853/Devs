@@ -1,15 +1,12 @@
 #include <iostream>
 using namespace std;
-int binSearch(const int *Array,int start,int end,int key) {
-	int left,right;
-	int mid;
-	left=start;
-	right=end;
-	while(left<=right) {
-		mid=left+(right-left)/2;
-		if(key==Array[mid])  return mid;
-		else if(key<Array[mid]) right=mid-1;
-		else if(key>Array[mid]) left=mid+1;
+int binSearch(const int *Array , int start , int end , int key) {
+	int low = start,high = end,mid;
+	while(end <= high) {
+		mid=low + (high - low) / 2;
+		if(key == Array[mid])  return mid;
+		else if(key > Array[mid]) low = mid + 1;
+		else if(key < Array[mid]) high = mid - 1;
 	}
 	return -1;
 }
