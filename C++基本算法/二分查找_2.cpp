@@ -18,6 +18,7 @@ int binSearch(const int *Array , int start , int end) {
 	
 	if(Array[low] < Array[high]) return low; //{2,3,4,5,6}
 	else if(Array[low] == Array[mid] == Array[high]) { //{1,1,0,1,1,1,1}
+		//注意bool == bool == bool也是正确的。 
 		for(; Array[low] == Array[high] && low != high; ++low);
 		return low;
 	}
