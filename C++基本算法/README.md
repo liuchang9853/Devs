@@ -98,6 +98,7 @@ C F C S
 J D E H
 ```
 2. 对象封装的一些讨论。`struct`对象实例。
+3. 要判断`stack.size()`是否能作`for`循环的条件，如`for(;i < stack.size();){stack.push or stack.pop()}`就是错的。
 
 #### 快速排序：
 1. 快排代码。
