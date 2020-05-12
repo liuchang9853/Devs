@@ -68,6 +68,14 @@ bool ifUnvisited(stack<MatrixElem>& stepStack, MatrixElem elem) {
 	}
 	return true;
 }
+/*
+犯的错误：
+	for (int i = 0; i < int(stepStack.size()); ++i) {
+		tempStack.push(stepStack.top());
+		stepStack.pop();
+	}
+每一次循环，stepStack.size()都会减一，因此这样写是错误。 
+*/ 
 
 //核心
 void path(Matrix m, MatrixElem elem, String &str, stack<MatrixElem>& stepStack) {
