@@ -20,6 +20,8 @@ positiveExpPower(double base, int exponent) {
 	我们才能重载运算符。
 	而效率高的原因，可能是因为机器内存返回给编译器的是二进制数，因此位运算符是直接操作该二
 	进制数，而+、-、*、/、%等常规符号操作的是该二进制数转为十进制后的数，所以更为复杂。
+	
+	能用位运算的地方就要尽量用，可以大幅提高效率。 
 	*/
 	if(exponent & 0x1) result *= base; //用 & 0x1 代替 % 2 == 1
 	return result;
