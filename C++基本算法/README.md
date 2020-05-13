@@ -20,6 +20,12 @@
 3. `exit()`。
 4. `#include<stack>`的使用实例。
 
+#### pow：
+1. 题目：实现函数`double Power(double base, int exponent)`，求`base`的`exponent`次方。不得使用库函数，同时不需要考虑大数问题。
+2. 实现了`pow(a , b) = a^b`。
+3. 讨论了位运算符对提高效率的重要性，并提供了实例。能用位运算的地方就要尽量用，可以大幅提高效率。
+4. 异常处理实例。
+
 #### string_1：
 1. `#include<string>`头文件下的`string`类型、常用函数、遍历。
 2. `cin`和`getline()`。
