@@ -3,7 +3,7 @@
 #define MAX_VERTEX_NUM 20
 using namespace std;
 
-//图定义
+//图的连接矩阵定义
 typedef struct {
 	char vex [MAX_VERTEX_NUM];
 	int edge [MAX_VERTEX_NUM][MAX_VERTEX_NUM];
