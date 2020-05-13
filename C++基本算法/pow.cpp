@@ -37,7 +37,7 @@ double power(double base, int exponent) {
 
 int main() {
 	try {
-
+		
 		cout << power(1 , 7) << endl;
 		cout << power(2 , 16) << endl;
 		cout << power(9 , 7) << endl;
@@ -52,8 +52,10 @@ int main() {
 		cout << power(0 , 12) << endl;
 		cout << power(0 , -12) << endl;
 		cout << power(0 , 0) << endl;
+		
 	} catch(const char * error) {
 		cout << error;
 	}
+	
 	return 0;
 }
