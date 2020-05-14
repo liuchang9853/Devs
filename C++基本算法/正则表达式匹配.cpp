@@ -20,14 +20,14 @@ bool match(char patternArr[] , char charArr[]) {
 
 			continue; //应对 'ch_1','*','ch_2','*'。
 		}
-		
+
 		if(patternArr[i] == '.') {
 			++i;
 			++j;
 
 			continue; //应对 '.','ch','*'
 		}
-		
+
 		if(charArr[j] != patternArr[i]) return false;
 		else {
 			++i;
