@@ -8,26 +8,28 @@
 using namespace std;
 bool match(char patternArr[] , char charArr[]) {
 	int i = 0 , j = 0;
-	while(patternArr[i] != '\0' && charArr[j] != '\0'){
-		if((charArr[j] == patternArr[i] || patternArr[i] == '.') && patternArr[i + 1] == '*'){
-			//避免 'ch_1','*' not match 'ch_2','*' ；应对 '.','*'。 
+	while(patternArr[i] != '\0' && charArr[j] != '\0') {
+		if((charArr[j] == patternArr[i] || patternArr[i] == '.') && patternArr[i + 1] == '*') {
+			//避免 'ch_1','*' not match 'ch_2','*' ；应对 '.','*'。
 			char ch = charArr[j];
-			
+
 			for( ; charArr[j + 1] == ch ; ++j);
-			
-			i += 2; //使用完 'ch','*' ，故跳过。 
+
+			i += 2; //使用完 'ch','*' ，故跳过。
 			j += 1;
-			
-			continue; //应对 'ch_1','*','ch_2','*'。 
+
+			continue; //应对 'ch_1','*','ch_2','*'。
 		}
-		if(patternArr[i] == '.'){
+		
+		if(patternArr[i] == '.') {
 			++i;
 			++j;
-			
-			continue; //应对 '.','ch','*' 
+
+			continue; //应对 '.','ch','*'
 		}
+		
 		if(charArr[j] != patternArr[i]) return false;
-		else{
+		else {
 			++i;
 			++j;
 		}
