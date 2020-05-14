@@ -18,7 +18,7 @@ void with_carry(bigData &data , int carry) {
 void print_1_to_max(int n) {
 	//大数初始化
 	bigData data;
-	data.numArr = new int[n + 1](); //numArr[0]用于存放最高位进位以判断是否输出完毕
+	data.numArr = new int[n + 1](); //numArr[0]用于存放最高位进位以判断是否输出完毕。这是哨兵。 
 	data.numLen = n;
 	data.index = n;
 
