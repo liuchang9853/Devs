@@ -20,6 +20,10 @@
 3. `exit()`。
 4. `#include<stack>`的使用实例。
 
+#### list_4：
+1. 题目：给定单向链表的头指针和一个结点指针，定义一个函数在O(1)时间删除该结点。
+2. 时间复杂度为`O(1)`的按指针删除链表元素。
+
 #### pow：
 1. 题目：实现函数`double Power(double base, int exponent)`，求`base`的`exponent`次方。不得使用库函数，同时不需要考虑大数问题。
 2. 实现了`pow(a , b) = a^b`。
