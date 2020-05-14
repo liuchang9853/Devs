@@ -37,6 +37,7 @@ bool match(char patternArr[] , char charArr[]) {
 	if(patternArr[i] == '\0' && charArr[j] == '\0') return true;
 	else return false;
 }
+
 int main() {
 	char patternArr[] = {'a','a','.','b','*','c','.','.','d','*','e','\0'};
 	char charArr_1[] = {'a','a','z','b','b','b','c','g','k','d','e','\0'}; //Æ¥Åä
