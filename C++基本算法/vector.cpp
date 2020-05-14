@@ -35,11 +35,12 @@ int main() {
 	
 	b.erase(b.begin() , b.begin() + 2); //（9）删除b[0,1]，即[first,last)
 	
-	b.clear();//arr.clear()，清空arr
+	b.clear();//（10）arr.clear()，清空arr
 	 
 	return 0;
 }
 /*
+（11） 
 vector<char> ch[len] 和 vector<char> ch(len) 的差别：
 前者定义了一个ch数组，每一元素为一个vector可变数组。
 后者定义了一个长为len的vector可变长数组。
