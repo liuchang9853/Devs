@@ -131,6 +131,23 @@ place(arr,str.size()+1);
 #### 二维数组_3：
 1. 构建动态二维数组。
 
+#### 二维数组_4：
+1. 题目：输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。
+2. `malloc` 和 `free` ；`new` 和 `delete`。（重要）
+3. 创建、回收动态二维数组。模板：
+```javascript
+T * * arr = new T * [rowNum];
+T * arr_ptr = new T[rowNum * colNum]; //构建第一维指针数组 
+for (int i = 0; i < rowNum * colNum; ++i)
+	if (i % colNum == 0) arr[i / colNum] = &arr_ptr[i]; //为第一维指针数组赋值 
+for (int i = 0; i < rowNum; ++i)
+	for (int j = 0; j < colNum; ++j)
+		arr[i][j] = val_i_j; //为元素赋值
+fun(arr); //使用
+delete arr_ptr; //回收第二维空间
+delete arr; //回收第一维空间 
+```
+
 #### 位运算：
 1. 题目：请实现一个函数，输入一个整数，输出该数二进制表示中1的个数。例如把9表示成二进制是1001，有2位是1。因此如果输入9，该函数输出2。
 2. 5种位运算总结。
