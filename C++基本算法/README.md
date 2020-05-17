@@ -181,3 +181,28 @@ J D E H
 #### 递归与循环：
 1. `Fibonacci`数列的递归、循环实现。
 2. 两种方法的性能讨论。
+
+#### 杂记
+1. 各类型实例在内存中占有的字节数（`bit`位）：
+```javascript
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+	cout << sizeof(char) << ends; //1B
+	cout << sizeof(short) << ends; //2B
+	cout << sizeof(int) << ends; //4B
+	cout << sizeof(long) << ends; //4B
+	cout << sizeof(long int) << ends; //4B
+	cout << sizeof(long long) << ends; //8B
+	cout << sizeof(float) << ends; //4B
+	cout << sizeof(double) << ends; //8B
+	cout << sizeof(int *) << ends; //8B
+	cout << sizeof(char *) << ends; //8B
+	cout << sizeof(double *) << ends; //8B
+	cout << sizeof(string) << ends; //8B
+	return 0;
+}
+```
+此外，要注意`double`和`float`变量最后几位是近似位，故类似于`double x = 0.5;if(x == 0.5){}`的语句是错误的，因为实际上`x!=0.5`，而可能是`x=0.5000....01`。
+因此，在使用`== 、>=、<=`等带有`=`的判断符时，要设`EPSILON`。当`fabs(x - 0.5)<=EPSILON`时，条件满足。
