@@ -32,6 +32,7 @@ bool stack_order_match(T arr_ori [] , T arr_mat []) {
 	
 	return true;
 }
+
 int main() {
 	char ch_1[] = {'a','b','c','d','e'};
 	char ch_2[] = {'d','e','c','b','a'};
