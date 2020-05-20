@@ -11,6 +11,7 @@ typedef struct BiTNode{
 	BiTNode * lchild , * rchild;
 } BiTNode , * BiTNodePtr;
 
+//中序遍历造指针数组 
 void InOrder(BiTNodePtr & T , vector <BiTNodePtr> & nodePtr) {
 	if(T) {
 		InOrder(T->lchild , nodePtr);
@@ -19,6 +20,7 @@ void InOrder(BiTNodePtr & T , vector <BiTNodePtr> & nodePtr) {
 	}
 }
 
+//转换函数 
 void double_list(BiTNodePtr & T) {
 	if(!T) return;
 
