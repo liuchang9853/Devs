@@ -39,6 +39,11 @@
 1. 题目：输入两个递增排序的链表，合并这两个链表并使新链表中的结点仍然是按照递增排序的。
 2. 还是注意头结点是否存在的问题。
 
+#### list_9：
+1. 题目：请实现函数`ComplexListNode* Clone(ComplexListNode* pHead)`，复制一个复杂链表。在复杂链表中，每个结点除了有一个`m_pNext`指针指向下一个结点外，
+还有一个`m_pSibling`指向链表中的任意结点或者`nullptr`。
+2. 特殊链表的复制方法。
+
 #### pow：
 1. 题目：实现函数`double Power(double base, int exponent)`，求`base`的`exponent`次方。不得使用库函数，同时不需要考虑大数问题。
 2. 实现了`pow(a , b) = a^b`。
