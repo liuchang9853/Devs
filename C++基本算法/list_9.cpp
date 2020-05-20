@@ -24,27 +24,28 @@ typedef struct ListNode {
 } ListNode , * ListPtr;
 
 void clone_list(ListPtr & L , ListPtr & L_Clone) {
+	if(!L) return;
+	 
 	ListPtr LPtr = L , L_ClonePtr = L_Clone;
-	while(LPtr) {
+	
+	while(LPtr) { //L与L_Clone交叉拼接，对L_Clone的data初始化。 
 		L_ClonePtr = new ListNode();
 		L_ClonePtr->data = LPtr->data;
 		L_ClonePtr->nextPtr = LPtr->nextPtr;
 		LPtr->nextPtr = L_ClonePtr;
 		LPtr = LPtr->nextPtr->nextPtr;
 	}
-
 	L_Clone = L->nextPtr;
-	LPtr = L;
-
-	while(LPtr) {
+	
+	LPtr = L; //初始化L_Clone的sibling
+	while(LPtr) { 
 		if(!LPtr->sibling) LPtr->nextPtr->sibling = LPtr->sibling;
 		else LPtr->nextPtr->sibling = LPtr->sibling->nextPtr;
 		LPtr = LPtr->nextPtr->nextPtr;
 	}
 
-	LPtr = L;
+	LPtr = L; //L与L_Clone分离，初始化L_Clone的nextPtr
 	L_ClonePtr = L_Clone;
-
 	while(LPtr) {
 		LPtr->nextPtr = L_ClonePtr->nextPtr;
 		if(L_ClonePtr->nextPtr)
