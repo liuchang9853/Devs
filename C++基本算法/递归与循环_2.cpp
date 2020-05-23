@@ -24,7 +24,7 @@ void permutations(char str_change [] , int start , int strLen) {
 		
 		//三明治尾 
 		for(int i = 0 ; i < strLen ; ++i) str_change[i] = str_change_fixed[i];
-		
+		delete str_change_fixed;
 		/*
 		这个三明治是最难的部分，原因在于之前没有搞清楚一个问题：到底什么时候、什么情况下
 		构建这个三明治？这里定义如下：当为了给递归调用传递关系而改变某些数据时，就要考虑
