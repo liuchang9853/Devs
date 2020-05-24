@@ -44,6 +44,9 @@
 还有一个`m_pSibling`指向链表中的任意结点或者`nullptr`。
 2. 特殊链表的复制方法。
 
+#### map：
+1. `map`语法汇总。
+
 #### pow：
 1. 题目：实现函数`double Power(double base, int exponent)`，求`base`的`exponent`次方。不得使用库函数，同时不需要考虑大数问题。
 2. 实现了`pow(a , b) = a^b`。
