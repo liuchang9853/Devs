@@ -48,7 +48,7 @@
 1. `map`语法汇总。`map`内部使用红黑树实现的，在建立映射的过程中会实现按`key`值大小的自动升序。`map`的`key`值是唯一的。
 
 #### multiset：
-1. `multiset`语法汇总。`multiset`位于`#include<set>`中，是含重升序的集合。
+1. `multiset`语法汇总。`multiset`位于`#include<set>`中，是含重自动升序的集合。
 
 #### pow：
 1. 题目：实现函数`double Power(double base, int exponent)`，求`base`的`exponent`次方。不得使用库函数，同时不需要考虑大数问题。
