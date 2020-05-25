@@ -1,6 +1,8 @@
 /*
 map内部使用红黑树实现的，在建立映射的过程中会实现按key值大小的自动升序。
-map用于实现两类型间的映射。 
+map用于实现两类型间的映射。
+map的key值是唯一的，即多次输入同一key值，取该key第一次出现的key-val存储，其他次
+出现的key-val被去重。 
 */
 #include <iostream>
 #include <string>
@@ -24,6 +26,10 @@ int main() {
 		*/
 	}
 	
+	map<string , int> mp3{{"aA" , 1},{"bB" , 2},{"cC" , 3}}; //初始化形式2
+	
+	map<string , int> mp4(mp3); //初始化形式3
+	 
 	for (map<char , int>::iterator it = mp1.begin() ; it != mp1.end() ; ++it) {
 		cout << it->first << ends << it->second <<endl;
 		//（2）遍历：it->first为key， it->second为value
@@ -40,7 +46,14 @@ int main() {
 	}
 	
 	mp2.clear(); //（4）清空map 
-	cout << mp2.size(); //（5）map大小 
+	
+	cout << mp2.size() << endl; //（5）map大小
+	
+	if(!mp3.empty()) mp3.insert({"dD" , 4}); //（6）empty()和insert()
+	
+	mp3.swap(mp2); //（7）交换
+	
+	cout << mp3.count("aA") << endl; //（8）输出val的个数 
 
 	return 0;
 }
