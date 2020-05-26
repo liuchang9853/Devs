@@ -306,7 +306,7 @@ int main() {
 因此，在使用`== 、>=、<=`等带有`=`的判断符时，要设`EPSILON = 1e-7`。当`fabs(x - 0.5)<=EPSILON`时，条件满足。
 
 2. [STL用法](http://c.biancheng.net/stl/)
-3. 
+3. `auto`用法：
 ```javascript
 /*
 可以将任何值赋给auto修饰的变量，auto变量一定要初始化。编译器会根据初始化值推断变量类型。 
