@@ -4,6 +4,33 @@
 #### DFS：
 1. `DFS`的实现。
 
+#### heap：
+1. 题目：如何得到一个数据流中的中位数？如果从数据流中读出奇数个数值，那么中位数就是所有数值排序之后位于中间的数值。如果从数据流中读出偶数个数值，
+那么中位数就是所有数值排序之后中间两个数的平均值。
+2. 堆的理论总结。
+3. 利用`vector`和`heap`使用堆，模板：
+```javascript
+#include <vector>
+#include <algorithm> //用于提供heap
+#include <functional> //用于提供less()和greater()
+
+vector<T> v{val_1,val_2,...,val_n};
+
+make_heap(v.begin,v.end); //默认创建大顶堆
+等效于：
+make_heap(v.begin,v.end,less<T>());
+
+make_heap(v.begin,v.end,greater<T>()); //创建小顶堆
+
+pop_heap(v.begin,v.end,greater<T>()); //删除小顶堆堆顶（不是真的删除，而是移到了堆尾，也即v.back()。）
+use v.back(); //在真正删除前使用
+v.pop_back(); //真正删除
+
+v.push_back(val); //v末添加元素，未添加至heap
+use v;
+push_heap(v.begin(),v.end(),greater<T>()); //向小顶堆插入元素
+```
+
 #### list_1：
 1. 尾插法构建链表。
 2. 按值删除元素。
