@@ -306,3 +306,34 @@ int main() {
 因此，在使用`== 、>=、<=`等带有`=`的判断符时，要设`EPSILON = 1e-7`。当`fabs(x - 0.5)<=EPSILON`时，条件满足。
 
 2. [STL用法](http://c.biancheng.net/stl/)
+3. 
+```javascript
+/*
+可以将任何值赋给auto修饰的变量，auto变量一定要初始化。编译器会根据初始化值推断变量类型。 
+*/
+#include <iostream>
+#include <typeinfo>
+#include <vector> 
+using namespace std;
+int main(){
+	auto a = 1;
+	cout << typeid(a).name() << endl; //i
+	
+	int b [] = {1,2,3,4};
+	auto & c = b;
+	cout << typeid(c).name() << endl; //a4_i
+	
+	auto d = "I love you." , e = "you hate me."; //序列初始化要求变量必须推导为同一类型。 
+	cout << typeid(d).name() << endl; //pkc
+	
+	vector<double> d_v{1.1,2.2,3.3,4.4};
+	for(auto f = d_v.begin() ; f != d_v.end() ; ++f);
+	
+	for(int i : b) cout << i << ends; //遍历序列方式
+	cout << endl;
+	
+	for(auto i : d_v) cout << i << ends;
+	
+	return 0;
+} 
+```
