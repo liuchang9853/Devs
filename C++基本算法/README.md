@@ -307,6 +307,27 @@ J D E H
 1. 题目：输入一个含有`8`个数字的数组，判断有没有可能把这`8`个数字分别放到正方体的`8`个顶点上，使得正方体上三组相对的面上的`4`个顶点的和都相等。
 2. 八皇后问题：在`8 ×8`的国际象棋盘上摆放`8`个皇后，使其不能相互攻击，即任意两个皇后不得处在同一行、同一列或者同一条对角线上。问有多少种符合条件的摆法？
 
+#### 重定义规则：
+1. 题目：输入一个正整数数组，把数组里所有数字拼接起来排成一个数，打印能拼接出的所有数字中最小的一个。例如输入数组`{3, 32, 321}`，则打印出这`3`个数
+字能排成的最小数字`321323`。
+2. 用于自定义规则排序的函数 `qsort()` 和 `#include<string>`下的数字转字符串函数`to_string()`。（重要）
+```javascript
+void qsort(void *arrPtr,arrLen,sizeof(arrElem),int (*cmp)(const void *,const void *));
+
+int cmp(const void * a , const void * b) {
+	//强制类型转换为数字，数字转字符串
+	string arg1 = to_string(* (const int *) a);
+	string arg2 = to_string(* (const int *) b);
+
+	string mn = arg1 + arg2;
+	string nm = arg2 + arg1;
+
+	//cmp返回1，则降序；返回-1，则升序。mn.compare(nm) > 0，即m>n；反之m<=n。
+	if(mn.compare(nm) >= 0) return 1;
+	else return -1;
+}
+```
+
 #### 杂记
 1. 各类型实例在内存中占有的字节数（`bit`位）：
 ```javascript
